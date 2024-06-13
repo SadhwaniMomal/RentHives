@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Navbar button now click goto next page
 
 // counter start
+
 const counterNumbers = document.querySelectorAll(".counter-number");
 
 counterNumbers.forEach((counterNumber) => {
@@ -113,11 +114,17 @@ counterNumbers.forEach((counterNumber) => {
 
     if (currentCount < target) {
       requestAnimationFrame(incrementCounter);
+    } else {
+      setTimeout(() => {
+        currentCount = 0;
+        incrementCounter();
+      }, 5 * 1000); // 5 seconds in milliseconds
     }
   };
 
   incrementCounter();
 });
+
 // counter end
 
 // blog start
@@ -144,52 +151,40 @@ function filterPosts(category) {
 // blog end
 
 // best dress
-const items = [
-  { name: "", image: "images/dress1.webp" },
-  { name: "", image: "images/dress7.webp" },
-  { name: "", image: "images/dress3.webp" },
-  { name: "", image: "images/dress4.webp" },
-  { name: "", image: "images/dress5.webp" },
-  { name: "", image: "images/dress6.webp" },
+const products = [
+  { name: "Dress 1", image: "images/dress1.webp", price: "$49.99" },
+  { name: "Dress 7", image: "images/dress7.webp", price: "$59.99" },
+  { name: "Dress 3", image: "images/dress3.webp", price: "$39.99" },
+  { name: "Dress 4", image: "images/dress4.webp", price: "$69.99" },
+  { name: "Dress 4", image: "images/dress4.webp", price: "$69.99" },
+  { name: "Dress 4", image: "images/dress4.webp", price: "$69.99" },
+  { name: "Dress 5", image: "images/dress5.webp", price: "$79.99" },
+  { name: "Dress 6", image: "images/dress6.webp", price: "$89.99" },
+  { name: "Dress 6", image: "images/dress6.webp", price: "$89.99" },
+  { name: "Dress 6", image: "images/dress6.webp", price: "$89.99" },
 ];
 
-let currentIndex = 0;
-
-function displayItems() {
+function displayProducts() {
   const grid = document.getElementById("grid");
-  grid.innerHTML = "";
-  for (let i = currentIndex; i < currentIndex + 3 && i < items.length; i++) {
-    const item = items[i];
-    const gridItem = document.createElement("div");
-    gridItem.className = "col-12 col-sm-6 col-md-4 grid-item";
-    gridItem.innerHTML = `
-          <img src="${item.image}" alt="${item.name}">
-          <p>${item.name}</p>
-      `;
-    grid.appendChild(gridItem);
-  }
+  grid.innerHTML = ""; // Clear previous products
+
+  products.forEach((product) => {
+    const productCard = document.createElement("div");
+    productCard.className = "product-card";
+    productCard.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <div class="product-info">
+        <h3>${product.name}</h3>
+        <p class="price">${product.price}</p>
+      </div>
+    `;
+    grid.appendChild(productCard);
+  });
 }
 
-function next() {
-  if (currentIndex + 3 < items.length) {
-    currentIndex += 3;
-  } else {
-    currentIndex = 0;
-  }
-  displayItems();
-}
+// Initialize the grid with the products
+displayProducts();
 
-function previous() {
-  if (currentIndex - 3 >= 0) {
-    currentIndex -= 3;
-  } else {
-    currentIndex = Math.max(0, items.length - 3);
-  }
-  displayItems();
-}
-
-// Initialize the grid with the first set of items
-displayItems();
 // best dress
 
 // subcription
