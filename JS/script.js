@@ -151,39 +151,6 @@ function filterPosts(category) {
 // blog end
 
 // best dress
-const products = [
-  { name: "Dress 1", image: "images/dress1.webp", price: "$49.99" },
-  { name: "Dress 7", image: "images/dress7.webp", price: "$59.99" },
-  { name: "Dress 3", image: "images/dress3.webp", price: "$39.99" },
-  { name: "Dress 4", image: "images/dress4.webp", price: "$69.99" },
-  { name: "Dress 4", image: "images/dress4.webp", price: "$69.99" },
-  { name: "Dress 4", image: "images/dress4.webp", price: "$69.99" },
-  { name: "Dress 5", image: "images/dress5.webp", price: "$79.99" },
-  { name: "Dress 6", image: "images/dress6.webp", price: "$89.99" },
-  { name: "Dress 6", image: "images/dress6.webp", price: "$89.99" },
-  { name: "Dress 6", image: "images/dress6.webp", price: "$89.99" },
-];
-
-function displayProducts() {
-  const grid = document.getElementById("grid");
-  grid.innerHTML = ""; // Clear previous products
-
-  products.forEach((product) => {
-    const productCard = document.createElement("div");
-    productCard.className = "product-card";
-    productCard.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <div class="product-info">
-        <h3>${product.name}</h3>
-        <p class="price">${product.price}</p>
-      </div>
-    `;
-    grid.appendChild(productCard);
-  });
-}
-
-// Initialize the grid with the products
-displayProducts();
 
 // best dress
 
