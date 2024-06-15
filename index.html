@@ -27,153 +27,180 @@
   </head>
   <body>
       <!-- Navbar starting -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-        <div class="container-fluid main_navbar">
-          <a class="navbar-brand" href="#">
-            <img src="./images/new logo concept rent hives web-04-05.svg" alt="Rent Hives Logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid d-flex align-items-center my-nav">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <i class="fa-solid fa-bars my-icon border border-0"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Left side navbar items -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- Women's -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="#" id="womensDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Women's
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="womensDropdown">
-                  <li><a class="dropdown-item" href="#">Bridal Bliss</a></li>
-                  <li><a class="dropdown-item" href="#">Chic Campus</a></li>
-                  <li><a class="dropdown-item" href="#">Glam Galz</a></li>
-                  <li><a class="dropdown-item" href="#">Lovely Looks</a></li>
-                </ul>
-              </li>
-              <!-- Men's -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="#" id="mensDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Men's
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="mensDropdown">
-                  <li><a class="dropdown-item" href="#">Campus Cool</a></li>
-                  <li><a class="dropdown-item" href="#">Groom Gear</a></li>
-                  <li><a class="dropdown-item" href="#">Office Officials</a></li>
-                  <li><a class="dropdown-item" href="#">Party Picks</a></li>
-                  <li><a class="dropdown-item" href="#">Travels Trends</a></li>
-                </ul>
-              </li>
-              <!-- Special Occasions -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="#" id="specialOccasionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Special Occasions
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="specialOccasionsDropdown">
-                  <li><a class="dropdown-item" href="#">Weddings</a></li>
-                  <li><a class="dropdown-item" href="#">Festivals</a></li>
-                  <li><a class="dropdown-item" href="#">Red Carpet & High Profile Events</a></li>
-                  <li><a class="dropdown-item" href="#">Corporate & Formal Events</a></li>
-                  <li><a class="dropdown-item" href="#">Theme Parties</a></li>
-                </ul>
-              </li>
-              <!-- Travel & Vacation -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="#" id="travelVacationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Travel & Vacations
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="travelVacationsDropdown">
-                  <li><a class="dropdown-item" href="#">Premiere Outfits</a></li>
-                  <li><a class="dropdown-item" href="#">Gala Attire</a></li>
-                  <li><a class="dropdown-item" href="#">Conference Attire</a></li>
-                  <li><a class="dropdown-item" href="#">Western Outfits</a></li>
-                  <li><a class="dropdown-item" href="#">Modest Attires</a></li>
-                </ul>
-              </li>
-            </ul>
-            <!-- Right side icons -->
-            <div class="right-icons">
-              <a href="#" class="nav-link mx-2" id="searchIcon"><i class="fas fa-search"></i></a>
-              <a href="#" class="nav-link mx-2" id="userIcon"><i class="fas fa-user"></i></a>
-              <button class="btn mx-2" id="earnNowButton">Earn Now</button>
+          <img
+            src="./images/new logo concept rent hives web-04-05.svg"
+            alt="Rent Hives Logo"
+            class="ms-3"
+          />
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <img
+                src="./images/new logo concept rent hives web-04-05.svg"
+                alt="Rent Hives Logo"
+                class="ms-3"
+              />
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <!-- Women's -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-dark px-4"
+                    href="#"
+                    id="womensDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Women's
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="womensDropdown">
+                    <li><a class="dropdown-item" href="#">Bridal Bliss</a></li>
+                    <li><a class="dropdown-item" href="#">Chic Campus</a></li>
+                    <li><a class="dropdown-item" href="#">Glam Galz</a></li>
+                    <li><a class="dropdown-item" href="#">Lovely Looks</a></li>
+                  </ul>
+                </li>
+                <!-- Men's -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-dark px-4"
+                    href="#"
+                    id="mensDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Men's
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="mensDropdown">
+                    <li><a class="dropdown-item" href="#">Campus Cool</a></li>
+                    <li><a class="dropdown-item" href="#">Groom Gear</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Office Officials</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Party Picks</a></li>
+                    <li><a class="dropdown-item" href="#">Travels Trends</a></li>
+                  </ul>
+                </li>
+                <!-- Special Occasions -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-dark px-4"
+                    href="#"
+                    id="specialOccasionsDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Special Occasions
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="specialOccasionsDropdown"
+                  >
+                    <li><a class="dropdown-item" href="#">Weddings</a></li>
+                    <li><a class="dropdown-item" href="#">Festivals</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Red Carpet & High Profile Events</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Corporate & Formal Events</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="#">Theme Parties</a></li>
+                  </ul>
+                </li>
+                <!-- Travel & Vacation -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-dark px-4"
+                    href="#"
+                    id="travelVacationsDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Travel & Vacations
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="travelVacationsDropdown"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Premiere Outfits</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Gala Attire</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Conference Attire</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Western Outfits</a></li>
+                    <li><a class="dropdown-item" href="#">Modest Attires</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right side icons -->
+          <div class="right-icons ms-auto d-flex align-items-center">
+            <a href="#" class="nav-link px-3" id="searchIcon"
+              ><i class="fas fa-search"></i
+            ></a>
+            <a href="#" class="nav-link px-3" id="userIcon"
+              ><i class="fas fa-user"></i
+            ></a>
+            <button class="btn px-3" id="earnNowButton">Earn Now</button>
           </div>
         </div>
       </nav>
+
       <!-- Search sidebar -->
       <div class="sidebar" id="sidebar">
       <!-- <h2>Search</h2> -->
       <input type="text" placeholder="search">
       </div>
     
-    <!-- home section starting  -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+        <!-- home section starting  -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="carousel-background" style="background-image: url('images/c4.jpg');background-repeat: no-repeat; background-position: center; background-size: cover;">
+              <div class="carousel-background" style="background-image: url('images/b10.webp');background-repeat: no-repeat; background-position: center; background-size: cover;">
                 <div class="carousel-caption">
                   <h1>Perfect Outfit is Your </h1>
                   <h2> Prefect Festive</h2>
                   <p>GET IT ON YOUR TERMS!</p>
-                  <a href="#"class="text-decoration-none p-3 rounded text-white bg-black my-2">Earn Now</a>
+                  <a href="#"class="text-decoration-none px-3  py-3 rounded text-white bg-black my-2">Earn Now</a>
                 </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-background" style="background-image: url('images/c6.jpg');background-repeat: no-repeat; background-position: center; background-size: cover;">
-                <div class="carousel-caption">
-                  <h1>Perfect Outfit is Your </h1>
-                  <h2> Prefect Festive</h2>
-                  <p>GET IT ON YOUR TERMS!</p>
-                  <a href="#"class="text-decoration-none p-3 rounded text-white bg-black my-2">Earn Now</a>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-background" style="background-image: url('images/c2.jpg');background-repeat: no-repeat; background-position: center; background-size: cover;">
-                <div class="carousel-caption">
-                  <h1>Perfect Outfit is Your </h1>
-                  <h2> Prefect Festive</h2>
-                  <p>GET IT ON YOUR TERMS!</p>
-                  <a href="#"class="text-decoration-none p-3 rounded text-white bg-black my-2">Earn Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <!-- home section Ending -->
-
-    <!-- Speical Occasion  -->>
-    <div class="container my-4" id="product-cards">
-      <p class="text-center">Be any version of yourself</p>
-      <h1 class="text-center mb-4">Special Occasions</h1>
-    
-      <div class="row justify-content-evenly my-3">
-        <div class="col-md-6 bg-image" style="background-image: url('images/specialwome\'s.jpg');">
-          <div class="overlay">
-            <h1 class="text-white fw-bold">For Women's</h1>
-            <a href="#" class="btn showmore">Show More</a>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-12 bg-image" style="background-image: url('images/full-shot-man-wearing-ukranian-shirt.jpg');">
-              <div class="overlay">
-                <h1>For Men's</h1>
-                <a href="#" class="btn showmore">Show More</a>
-              </div>
-            </div>
-            <div class="col-12 bg-image" style="background-image: url('images/tender-stylish-woman-posing-wearing-blue-maxi-dress-straw-bag-gladiator-sandals.jpg');">
-              <div class="overlay">
-                <h1>Accessories</h1>
-                <a href="#" class="btn showmore">Show More</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Speical Occasion  -->
+        <!-- home section Ending -->
    <!-- New Div with Four Columns -->
     <div class="container my-5 ">
     <div class="row text-center">
@@ -202,217 +229,37 @@
     </div>
    <!-- New Div with Four Columns -->
 
-   <!-- Travel and Vaccation -->
-   <div class="container my-5" id="travel-card" >
-    <div class="heading d-flex justify-content-between my-5">
-        <h1 class="">Top Collections</h1>
-        <a href="#" class="btn ">View All Products</a>
+   <!-- Our Collections-->
+    <div class="container">
+      <div class="row my-4">
+        <div class="col-md-8">
+          <h1>Best Selling Products</h1>
+        </div>
+        <div class="col-md-4">
+          <select class="form-control" id="categoryFilter">
+            <option value="all" selected>All</option>
+            <option value="men">Men's</option>
+            <option value="women">Women's</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+      </div>
+
+      <div class="product-section">
+        <div class="row" id="productGrid">
+          <!-- Products will be dynamically inserted here -->
+        </div>
+      </div>
+
+      <div class="pagination-buttons">
+        <button data-page="1" class="active">1</button>
+        <button data-page="2">2</button>
+        <button data-page="3">3</button>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 order-1 order-md-1">
-            <div class="image-container">
-                <img src="./images/1.webp" alt="Image 1" class="img-fluid ">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product One</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-3 order-md-2">
-            <div class="image-container">
-                <img src="./images/2.webp" alt="Image 2" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="description">
-                <h4 class="text-center">Rent Hives</h4>
-                <h3>Product Two</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/3.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 order-1 order-md-1">
-            <div class="image-container">
-                <img src="./images/5.webp" alt="Image 1" class="img-fluid ">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product One</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-3 order-md-2">
-            <div class="image-container">
-                <img src="./images/6.webp" alt="Image 2" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="description">
-                <h4 class="text-center">Rent Hives</h4>
-                <h3>Product Two</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/7.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
 
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/8.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
 
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/9.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/10.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/11.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/12.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-        <div class="col-md-4 order-5 order-md-3">
-            <div class="image-container">
-                <img src="./images/13.webp" alt="Image 3" class="img-fluid">
-                <div class="hover-overlay">
-                    <a href="#" class="read-more">
-                        <i class="fas fa-link fa-xl"></i>
-                    </a>
-                </div>
-
-            </div>
-            <div class="description">
-                <h4 class=" text-center">Rent Hives</h4>
-                <h3>Product Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, velit ac pharetra dignissim, nisi velit venenatis nisi, et volutpat nunc nisi et velit.</p>
-                <a href="#" class="link-read-more">Buy Now</a>
-            </div>
-        </div>
-    </div>
-   </div>
-   <!-- Travel and Vaccation -->
+   <!-- Our Collections -->
 
    <!-- services  -->
    <div class="container my-3">
@@ -482,9 +329,7 @@
     </div>
     <!-- New Div with counter and Column -->
 
-    <!-- best dress -->
-    
-  <!-- best dress -->
+ 
 
   <!-- The Premier Clothing Rental Subscription  -->
   <div class="container subscription">
@@ -495,10 +340,10 @@
         <a href="#" class="btn btn-dark text-white py-2 px-5">See Here</a>
     </div>
 
-    <div class="row " id="grid-container">
+    <div class="row grid-container">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4 ">
             <div class="grid-item">
-                <img src="./images/rent bangs.webp" class="img-fluid" alt="Image 1">
+                <img src="./images/image-1.webp" class="img-fluid" alt="Image 1">
                 <div class="product-info">
                     <div class="product-name">Rent Hand Bags</div>
                     <div class="product-price">$10.00</div>
@@ -507,7 +352,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="grid-item">
-                <img src="./images/rent coat.webp" class="img-fluid" alt="Image 2">
+                <img src="./images/image-10.webp" class="img-fluid" alt="Image 2">
                 <div class="product-info">
                     <div class="product-name">Rent Coats</div>
                     <div class="product-price">$10.00</div>
@@ -516,7 +361,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="grid-item">
-                <img src="./images/rent top.webp" class="img-fluid" alt="Image 3">
+                <img src="./images/image-15.webp" class="img-fluid" alt="Image 3">
                 <div class="product-info">
                     <div class="product-name">Rent Top</div>
                     <div class="product-price">$10.00</div>
@@ -525,7 +370,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="grid-item">
-                <img src="./images/rent wedding dressess.webp" class="img-fluid" alt="Image 4">
+                <img src="./images/image-16.webp" class="img-fluid" alt="Image 4">
                 <div class="product-info">
                     <div class="product-name">Rent Wedding Dress</div>
                     <div class="product-price">$10.00</div>
@@ -534,7 +379,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="grid-item">
-                <img src="./images/rent wedding dressess.webp" class="img-fluid" alt="Image 4">
+                <img src="./images/image-31.webp" class="img-fluid" alt="Image 4">
                 <div class="product-info">
                     <div class="product-name">Rent Wedding Dress</div>
                     <div class="product-price">$10.00</div>
@@ -543,7 +388,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="grid-item">
-                <img src="./images/rent westdress.webp" class="img-fluid" alt="Image 5">
+                <img src="./images/image-32.webp" class="img-fluid" alt="Image 5">
                 <div class="product-info">
                     <div class="product-name">Rent Party Dress</div>
                     <div class="product-price">$10.00</div>
@@ -552,7 +397,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="grid-item">
-                <img src="./images/dress9.webp" class="img-fluid" alt="Image 6">
+                <img src="./images/image-28.webp" class="img-fluid" alt="Image 6">
                 <div class="product-info">
                     <div class="product-name">Rent Western Dress</div>
                     <div class="product-price">$10.00</div>
@@ -561,7 +406,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
             <div class="grid-item">
-                <img src="./images/dress9.webp" class="img-fluid" alt="Image 6">
+                <img src="./images/image-23.webp" class="img-fluid" alt="Image 6">
                 <div class="product-info">
                     <div class="product-name">Rent Western Dress</div>
                     <div class="product-price">$10.00</div>

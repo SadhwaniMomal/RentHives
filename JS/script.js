@@ -1,4 +1,4 @@
-// navbar
+// JavaScript for dropdown functionality
 document.addEventListener("DOMContentLoaded", function () {
   // Get all dropdown items
   var dropdowns = document.querySelectorAll(".nav-item.dropdown");
@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 //   navbar
 
 // sreach bar show
@@ -98,8 +97,271 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Navbar button now click goto next page
 
-// counter start
+// our collections
+const products = [
+  {
+    name: "Product Name 1",
+    price: "$10.00",
+    image: "./images/image-1.webp",
+    category: "men",
+  },
+  {
+    name: "Product Name 2",
+    price: "$20.00",
+    image: "./images/image-2.webp",
+    category: "women",
+  },
+  {
+    name: "Product Name 1",
+    price: "$10.00",
+    image: "./images/image-1.webp",
+    category: "category1",
+  },
+  {
+    name: "Product Name 2",
+    price: "$20.00",
+    image: "./images/image-2.webp",
+    category: "category1",
+  },
+  {
+    name: "Product Name 3",
+    price: "$30.00",
+    image: "./images/image-3.webp",
+    category: "category1",
+  },
+  {
+    name: "Product Name 4",
+    price: "$40.00",
+    image: "./images/image-4.webp",
+    category: "category2",
+  },
+  {
+    name: "Product Name 5",
+    price: "$50.00",
+    image: "./images/image-5.webp",
+    category: "category2",
+  },
+  {
+    name: "Product Name 6",
+    price: "$60.00",
+    image: "./images/image-6.webp",
+    category: "category2",
+  },
+  {
+    name: "Product Name 7",
+    price: "$70.00",
+    image: "./images/image-7.webp",
+    category: "category3",
+  },
+  {
+    name: "Product Name 8",
+    price: "$80.00",
+    image: "./images/image-8.webp",
+    category: "category3",
+  },
+  {
+    name: "Product Name 9",
+    price: "$90.00",
+    image: "./images/image-9.webp",
+    category: "category3",
+  },
+  {
+    name: "Product Name 10",
+    price: "$100.00",
+    image: "./images/image-10.webp",
+    category: "category4",
+  },
+  {
+    name: "Product Name 11",
+    price: "$110.00",
+    image: "./images/image-11.webp",
+    category: "category4",
+  },
+  {
+    name: "Product Name 12",
+    price: "$120.00",
+    image: "./images/image-12.jpg",
+    category: "category4",
+  },
+  {
+    name: "Product Name 13",
+    price: "$130.00",
+    image: "./images/image-13.webp",
+    category: "category5",
+  },
+  {
+    name: "Product Name 14",
+    price: "$140.00",
+    image: "./images/image-14.webp",
+    category: "category5",
+  },
+  {
+    name: "Product Name 15",
+    price: "$150.00",
+    image: "./images/image-15.webp",
+    category: "category5",
+  },
+  {
+    name: "Product Name 16",
+    price: "$160.00",
+    image: "./images/image-16.webp",
+    category: "category1",
+  },
+  {
+    name: "Product Name 17",
+    price: "$170.00",
+    image: "./images/image-17.webp",
+    category: "category1",
+  },
+  {
+    name: "Product Name 18",
+    price: "$180.00",
+    image: "./images/image-18.webp",
+    category: "category1",
+  },
+  {
+    name: "Product Name 19",
+    price: "$190.00",
+    image: "./images/image-19.webp",
+    category: "category2",
+  },
+  {
+    name: "Product Name 20",
+    price: "$200.00",
+    image: "./images/image-20.webp",
+    category: "category2",
+  },
+  {
+    name: "Product Name 21",
+    price: "$210.00",
+    image: "./images/image-21.webp",
+    category: "category2",
+  },
+  {
+    name: "Product Name 22",
+    price: "$220.00",
+    image: "./images/image-22.webp",
+    category: "category3",
+  },
+  {
+    name: "Product Name 23",
+    price: "$230.00",
+    image: "./images/image-23.webp",
+    category: "category3",
+  },
+  {
+    name: "Product Name 24",
+    price: "$240.00",
+    image: "./images/image-24.webp",
+    category: "category3",
+  },
+  {
+    name: "Product Name 25",
+    price: "$250.00",
+    image: "./images/image-25.webp",
+    category: "category4",
+  },
+  {
+    name: "Product Name 26",
+    price: "$260.00",
+    image: "./images/image-26.webp",
+    category: "category4",
+  },
+  {
+    name: "Product Name 27",
+    price: "$270.00",
+    image: "./images/image-27.webp",
+    category: "category4",
+  },
+  {
+    name: "Product Name 28",
+    price: "$280.00",
+    image: "./images/image-28.webp",
+    category: "category5",
+  },
+  {
+    name: "Product Name 29",
+    price: "$290.00",
+    image: "./images/image-29.webp",
+    category: "category5",
+  },
+  {
+    name: "Product Name 30",
+    price: "$300.00",
+    image: "./images/image-30.webp",
+    category: "category5",
+  },
+  // Add more products as needed
+];
 
+function renderProducts(page = 1, category = "all") {
+  const productsPerPage = 12;
+  const startIndex = (page - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+  const productGrid = document.getElementById("productGrid");
+  productGrid.innerHTML = "";
+  let filteredProducts = products;
+
+  // Filter products based on the selected category
+  if (category !== "all") {
+    filteredProducts = products.filter(
+      (product) => product.category === category
+    );
+  }
+
+  // Pagination logic
+  const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+
+  paginatedProducts.forEach((product) => {
+    const productDiv = document.createElement("div");
+    productDiv.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-4";
+    productDiv.innerHTML = `
+    <div class="product">
+      <img src="${product.image}" alt="${product.name}" class="product-image" />
+      <div class="view-icon">&#128065;</div>
+      <div class="product-info">
+        <p class="product-name">${product.name}</p>
+        <p class="product-price">${product.price}</p>
+      </div>
+    </div>
+  `;
+    productGrid.appendChild(productDiv);
+  });
+}
+
+// Event listener for pagination buttons
+document.querySelectorAll(".pagination-buttons button").forEach((button) => {
+  button.addEventListener("click", function () {
+    document
+      .querySelectorAll(".pagination-buttons button")
+      .forEach((btn) => btn.classList.remove("active"));
+    this.classList.add("active");
+    const page = parseInt(this.getAttribute("data-page"));
+    const selectedCategory = document.getElementById("categoryFilter").value;
+    renderProducts(page, selectedCategory);
+  });
+});
+
+// Event listener for category filter
+document
+  .getElementById("categoryFilter")
+  .addEventListener("change", function () {
+    const selectedCategory = this.value;
+    // Reset pagination to page 1
+    document
+      .querySelectorAll(".pagination-buttons button")
+      .forEach((btn) => btn.classList.remove("active"));
+    document
+      .querySelector(".pagination-buttons button[data-page='1']")
+      .classList.add("active");
+    renderProducts(1, selectedCategory);
+  });
+
+// Initial render
+renderProducts();
+// our collection
+
+// counter start
 const counterNumbers = document.querySelectorAll(".counter-number");
 
 counterNumbers.forEach((counterNumber) => {
@@ -114,17 +376,11 @@ counterNumbers.forEach((counterNumber) => {
 
     if (currentCount < target) {
       requestAnimationFrame(incrementCounter);
-    } else {
-      setTimeout(() => {
-        currentCount = 0;
-        incrementCounter();
-      }, 5 * 1000); // 5 seconds in milliseconds
     }
   };
 
   incrementCounter();
 });
-
 // counter end
 
 // blog start
@@ -149,10 +405,6 @@ function filterPosts(category) {
     .classList.add("active");
 }
 // blog end
-
-// best dress
-
-// best dress
 
 // subcription
 function animateImage(img) {
