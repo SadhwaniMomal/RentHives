@@ -114,6 +114,17 @@
   outline: none;
   color: black;
 }
+
+.navbar {
+  padding: 0;
+}
+.offcanvas-body {
+  padding: 10px;
+}
+#navbarSearchForm {
+  display: none;
+}
+
 /* login-user css  */
 .user-form {
   display: none;

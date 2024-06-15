@@ -56,23 +56,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //   navbar
 
-// sreach bar show
+// show search icon
 document.addEventListener("DOMContentLoaded", function () {
-  const searchIcon = document.getElementById("searchIcon");
-  const sidebar = document.getElementById("sidebar");
+  var searchIcon = document.getElementById("searchIcon");
+  var sidebarToggle = document.getElementById("sidebarToggle");
+  var offcanvasNavbar = document.getElementById("offcanvasNavbar");
 
-  searchIcon.addEventListener("click", function (event) {
-    event.preventDefault();
-    sidebar.classList.toggle("show");
+  searchIcon.addEventListener("click", function () {
+    offcanvasNavbar.classList.toggle("show");
+    document.getElementById("navbarSearchForm").style.display = "block";
   });
 
-  document.addEventListener("click", function (event) {
-    if (!sidebar.contains(event.target) && !searchIcon.contains(event.target)) {
-      sidebar.classList.remove("show");
-    }
+  sidebarToggle.addEventListener("click", function () {
+    offcanvasNavbar.classList.toggle("show");
+    document.getElementById("navbarSearchForm").style.display = "none";
   });
 });
-// sreach bar  show
+// show search icon
 
 // Navbar button now click goto next page
 document.addEventListener("DOMContentLoaded", function () {
