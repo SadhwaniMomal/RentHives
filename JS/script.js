@@ -56,9 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //   navbar
 
-
-
-
 // Navbar button now click goto next page
 document.addEventListener("DOMContentLoaded", function () {
   const searchIcon = document.getElementById("searchIcon");
