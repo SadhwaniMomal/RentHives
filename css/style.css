@@ -202,7 +202,9 @@
 /* CSS for mobile */
 @media (max-width: 768px) {
   .carousel-caption {
-    width: 90%;
+    /* border: 2px solid; */
+    width: 100%;
+    /* font-size: 5px; */
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
