@@ -56,23 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //   navbar
 
-// show search icon
-document.addEventListener("DOMContentLoaded", function () {
-  var searchIcon = document.getElementById("searchIcon");
-  var sidebarToggle = document.getElementById("sidebarToggle");
-  var offcanvasNavbar = document.getElementById("offcanvasNavbar");
 
-  searchIcon.addEventListener("click", function () {
-    offcanvasNavbar.classList.toggle("show");
-    document.getElementById("navbarSearchForm").style.display = "block";
-  });
 
-  sidebarToggle.addEventListener("click", function () {
-    offcanvasNavbar.classList.toggle("show");
-    document.getElementById("navbarSearchForm").style.display = "none";
-  });
-});
-// show search icon
 
 // Navbar button now click goto next page
 document.addEventListener("DOMContentLoaded", function () {
